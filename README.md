@@ -9,6 +9,8 @@ page, so the examples cannot drift from the code.
 These are arithmetic helpers over numbers you type in. They are not medical advice,
 and nothing here recommends a dose, a diagnosis or a training decision.
 
+The same table, as a browsable page: <https://zfy989898.github.io/healthtools/>.
+
 | Tool | Source module |
 | --- | --- |
 | [Acute Chronic Workload Ratio Calculator](https://healthtools.icu/acute-chronic-workload-ratio-calculator/) | [`src/tools/acute-chronic-workload-ratio-calculator.mjs`](src/tools/acute-chronic-workload-ratio-calculator.mjs) |
