@@ -9,8 +9,14 @@
    "23333045"
   ]
  },
+ "src/tools/body-fat-from-bmi-calculator.mjs": {
+  "sha256": "4337bb13a81c16e34b4af65fafc9852bdda575810cb75f52ad6fb5b9c97ffc52",
+  "pmids": [
+   "2043597"
+  ]
+ },
  "src/tools/caffeine-half-life-calculator.mjs": {
-  "sha256": "16fa8c28eeaf09d3e57892ba536861f3ec00273c497fca629ab3f51191830172",
+  "sha256": "c769b9a89b11500d72c7446db42b476459532574e49630f8eca0a3dab774e191",
   "pmids": [
    "28603504"
   ]
@@ -26,14 +32,14 @@
   ]
  },
  "src/tools/us-navy-body-fat-calculator.mjs": {
-  "sha256": "2673a3430f84ec6ca3ccb06452fabf02427a2b96baa22448cc084bf5065f493f",
+  "sha256": "dc16b7951fce785d2f0b476b37cf04b4604a7b41086fa8f3dabc8430a223f2eb",
   "pmids": [
    "37351259",
    "39721003"
   ]
  },
  "src/tools/vo2-max-heart-rate-ratio-calculator.mjs": {
-  "sha256": "65038a3d2633056f48c966f8e0cc3b280ae99e5c120c96c01e95559085d5fa10",
+  "sha256": "458bb65ba9177b6cc58047eeb5f422c27e2a34be3870bc1d479c3a213c2c4969",
   "pmids": [
    "14624296",
    "35301581"

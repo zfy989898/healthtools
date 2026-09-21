@@ -12,6 +12,7 @@ and nothing here recommends a dose, a diagnosis or a training decision.
 | Tool | Source module |
 | --- | --- |
 | [Acute Chronic Workload Ratio Calculator](https://healthtools.icu/acute-chronic-workload-ratio-calculator/) | [`src/tools/acute-chronic-workload-ratio-calculator.mjs`](src/tools/acute-chronic-workload-ratio-calculator.mjs) |
+| [Body Fat From Bmi Calculator](https://healthtools.icu/body-fat-from-bmi-calculator/) | [`src/tools/body-fat-from-bmi-calculator.mjs`](src/tools/body-fat-from-bmi-calculator.mjs) |
 | [Caffeine Half Life Calculator](https://healthtools.icu/caffeine-half-life-calculator/) | [`src/tools/caffeine-half-life-calculator.mjs`](src/tools/caffeine-half-life-calculator.mjs) |
 | [Heart Rate Zone Calculator](https://healthtools.icu/heart-rate-zone-calculator/) | [`src/tools/heart-rate-zone-calculator.mjs`](src/tools/heart-rate-zone-calculator.mjs) |
 | [Us Navy Body Fat Calculator](https://healthtools.icu/us-navy-body-fat-calculator/) | [`src/tools/us-navy-body-fat-calculator.mjs`](src/tools/us-navy-body-fat-calculator.mjs) |
