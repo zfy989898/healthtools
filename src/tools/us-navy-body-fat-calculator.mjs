@@ -95,7 +95,7 @@ export const tool = {
     { q: 'Can I use this to check whether I meet military standards?', a: 'No. The Army replaced these equations with a different method under Army Directive 2023-11, and service-specific tables are administrative determinations made by personnel with a certified measurement technique. The range shown here is quoted context only.' },
     { q: 'Is the age input used in the calculation?', a: 'No. The circumference equations take height, neck, waist and, for women, hips. Age is asked only to select the body-fat standard range quoted alongside the result, because the published Army limits are age-banded.' },
   ],
-  related: ['caffeine-half-life-calculator', 'heart-rate-zone-calculator'],
+  related: ['caffeine-half-life-calculator', 'heart-rate-zone-calculator', 'body-fat-from-bmi-calculator'],
 }
 
 export function compute(i, k) {

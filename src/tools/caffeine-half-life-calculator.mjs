@@ -1,10 +1,10 @@
 export const tool = {
   slug: 'caffeine-half-life-calculator',
   name: 'Caffeine Half-Life Calculator',
-  h1: 'Caffeine Half-Life Calculator: How Much Caffeine Is Left?',
+  h1: 'How Long Does Caffeine Last? Half-Life Calculator',
   seo: {
-    title: 'Caffeine Half-Life Calculator - How Much Is Left | HealthTools',
-    desc: 'Enter a dose in milligrams and the hours since you took it. Get the caffeine still in your body, the published 3-7 hour adult half-life, and the time to fall under 50 mg.',
+    title: 'How Long Does Caffeine Last? Half-Life Calculator | HealthTools',
+    desc: 'Enter a dose in mg and the hours since you took it. See how long caffeine lasts, the milligrams still in your body, and the published 3-7 hour adult half-life.',
   },
   intro: 'Enter how much caffeine you took and how long ago, and this page tells you how many milligrams are still in your body. It reports the answer as an interval as well as a midpoint, because the published half-life is itself a range that varies several-fold between people.',
   category: 'stimulants',

@@ -1,10 +1,10 @@
 export const tool = {
   slug: 'vo2-max-heart-rate-ratio-calculator',
   name: 'VO2 Max From Heart Rate Calculator',
-  h1: 'VO2 Max From Heart Rate Calculator',
+  h1: 'VO2 Max Calculator (From Your Heart Rate)',
   seo: {
-    title: 'VO2 Max From Heart Rate Calculator | HealthTools',
-    desc: 'Estimate VO2max from the ratio between your maximum and resting heart rate using the factor published by Uth and colleagues, with the standard error for each input type.',
+    title: 'VO2 Max Calculator - From Heart Rate | HealthTools',
+    desc: 'What is VO2max and how to estimate it from the ratio between your maximum and resting heart rate, using the factor published by Uth and colleagues, with the standard error for each input type.',
   },
   intro: 'This page estimates VO2max from the ratio between your maximum and resting heart rate, using the proportionality factor published by Uth and colleagues. Enter a measured maximum and the published standard error is about 2.7 ml/kg/min; substitute an age-predicted maximum and it roughly doubles.',
   category: 'training',
