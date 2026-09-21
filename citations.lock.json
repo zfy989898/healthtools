@@ -1,0 +1,42 @@
+{
+ "src/tools/acute-chronic-workload-ratio-calculator.mjs": {
+  "sha256": "7cbcc29f629eee764a768f7feb9bb32f51f36237aa7510f2deb4c57891854233",
+  "pmids": [
+   "26758673",
+   "26701923",
+   "9662690",
+   "23962877",
+   "23333045"
+  ]
+ },
+ "src/tools/caffeine-half-life-calculator.mjs": {
+  "sha256": "16fa8c28eeaf09d3e57892ba536861f3ec00273c497fca629ab3f51191830172",
+  "pmids": [
+   "28603504"
+  ]
+ },
+ "src/tools/heart-rate-zone-calculator.mjs": {
+  "sha256": "fb7daf35a5fd0a1e67f93ec829960534b5aca4173bddb7f48f68ef73a3a32fe2",
+  "pmids": [
+   "11153730",
+   "22376273",
+   "20585008",
+   "3387734",
+   "33042384"
+  ]
+ },
+ "src/tools/us-navy-body-fat-calculator.mjs": {
+  "sha256": "2673a3430f84ec6ca3ccb06452fabf02427a2b96baa22448cc084bf5065f493f",
+  "pmids": [
+   "37351259",
+   "39721003"
+  ]
+ },
+ "src/tools/vo2-max-heart-rate-ratio-calculator.mjs": {
+  "sha256": "65038a3d2633056f48c966f8e0cc3b280ae99e5c120c96c01e95559085d5fa10",
+  "pmids": [
+   "14624296",
+   "35301581"
+  ]
+ }
+}
