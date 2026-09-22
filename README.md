@@ -34,7 +34,9 @@ against PubMed before a build is allowed to ship. Written out on the site:
 [how the sources are chosen and checked](https://healthtools.icu/methodology/),
 [who runs this](https://healthtools.icu/about/). The browsable version of the table
 above, with the formula each module implements, is on the
-[documentation page](https://zfy989898.github.io/healthtools/).
+[documentation page](https://zfy989898.github.io/healthtools/). The machine-readable
+list of every indexable page is
+<https://healthtools.icu/sitemap.xml>.
 
 ## Run
 
