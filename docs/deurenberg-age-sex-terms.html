@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Deurenberg age and sex terms: coefficients, a reference grid, and the fitted range</title>
+<meta name="description" content="How the age and sex corrections in the 1991 Deurenberg body-fat equation work, what each term contributes, and the input range the published fit supports.">
+<style>
+body{font:16px/1.6 system-ui,sans-serif;max-width:52rem;margin:3rem auto;padding:0 1.25rem;color:#12242b}
+h1{font-size:1.6rem;line-height:1.25}h2{font-size:1.15rem;margin-top:2.2rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border-bottom:1px solid #d7e3e6;padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:#4b6570}
+a{color:#0f4c5c}code,pre{font-family:ui-monospace,monospace;font-size:.9em}
+pre{background:#f3f7f8;padding:.9rem 1rem;overflow-x:auto}
+p.note{color:#4b6570;font-size:.95rem}
+</style></head>
+<body>
+<h1>The Deurenberg age and sex terms</h1>
+<p>A method note for <code>src/tools/body-fat-from-bmi-calculator.mjs</code>, which implements the body-fat
+prediction equation published by Deurenberg, Weststrate and Seidell in 1991. The
+calculator itself is on the live site at
+<a href="https://healthtools.icu/body-fat-from-bmi-calculator/">healthtools.icu/body-fat-from-bmi-calculator/</a>; this page
+covers only what the two correction terms do and where the equation stops being
+supported by its own data.</p>
+<h2>The equation as the module implements it</h2>
+<pre>BF% = 1.20 x BMI + 0.23 x age - 10.8 x sex - 5.4, where BMI = weight in kg / (height in m)^2 and sex is coded 1 for male, 0 for female</pre>
+<p>Read as code, the four constants are a BMI term, an age term, a sex term and a flat
+subtraction. The module keeps them as named values rather than inlining them, so
+each figure from the paper appears exactly once.
+<table>
+  <thead><tr><th>Term</th><th>Coefficient</th><th>What it does to the answer</th></tr></thead>
+  <tbody>
+    <tr><td>BMI</td><td>1.2</td><td>Every point of BMI adds 1.2 points of estimated body fat.</td></tr>
+    <tr><td>Age</td><td>0.23</td><td>Height and weight held constant, the estimate rises 10.4 points between 20 and 65 years.</td></tr>
+    <tr><td>Sex</td><td>10.8 for males, 0 for females, then a flat 5.4</td><td>At identical age, height and weight the two sexes differ by exactly 10.8 points, because the sex term is the only one that switches.</td></tr>
+  </tbody>
+</table>
+<p>The age term is the reason a calculator of this type cannot be a body-fat
+measurement. It is a linear stand-in for the loss of lean tissue that tracks age in a
+population average, applied to whoever types in a number.</p>
+<h2>Reference grid, produced by the shipped function</h2>
+<p>Every cell below is the return value of <code>compute()</code> in the module at
+export time: height fixed at 170 cm, weight chosen to land on the row BMI, one
+column per age. It is a map of the equation, not a set of targets.</p>
+<table>
+  <thead><tr><th>Sex</th><th>Weight (kg)</th><th>BMI</th><th>20 years</th><th>35 years</th><th>50 years</th><th>65 years</th></tr></thead>
+  <tbody>
+      <tr><td>Man</td><td>53.5</td><td>18.5</td><td>10.6</td><td>14.1</td><td>17.5</td><td>21.0</td></tr>
+      <tr><td>Man</td><td>63.6</td><td>22.0</td><td>14.8</td><td>18.3</td><td>21.7</td><td>25.2</td></tr>
+      <tr><td>Man</td><td>72.2</td><td>25.0</td><td>18.4</td><td>21.8</td><td>25.3</td><td>28.7</td></tr>
+      <tr><td>Man</td><td>86.7</td><td>30.0</td><td>24.4</td><td>27.9</td><td>31.3</td><td>34.8</td></tr>
+      <tr><td>Woman</td><td>53.5</td><td>18.5</td><td>21.4</td><td>24.9</td><td>28.3</td><td>31.8</td></tr>
+      <tr><td>Woman</td><td>63.6</td><td>22.0</td><td>25.6</td><td>29.1</td><td>32.5</td><td>36.0</td></tr>
+      <tr><td>Woman</td><td>72.2</td><td>25.0</td><td>29.2</td><td>32.6</td><td>36.1</td><td>39.5</td></tr>
+      <tr><td>Woman</td><td>86.7</td><td>30.0</td><td>35.2</td><td>38.7</td><td>42.1</td><td>45.6</td></tr>
+  </tbody>
+</table>
+<p>At the same BMI and age the two sexes are never given the same answer, and the gap
+is the 10.8 points of the sex term. The comparison that trips people up runs the
+other way: an older man against a younger woman at one BMI, where the age term
+climbs while the sex term does not, so the two almost meet. At BMI 25 this
+module returns 28.7 for a 65-year-old man and
+29.2 for a 20-year-old woman. Two figures that
+close are a coincidence of the arithmetic, not a claim that the two bodies are
+similar.</p>
+<h2>The range the published fit covers</h2>
+<p>The equation was derived from a sample measured by densitometry and validated
+inside the observed spread of that data. What the source paper states, and
+what the module therefore encodes as limits:</p>
+<table>
+  <thead><tr><th>Reported</th><th>Value</th><th>How the module uses it</th></tr></thead>
+  <tbody>
+    <tr><td>Standard error of the estimate</td><td>4.1 points of body fat</td><td>Shown to the user as the interval around the point figure, not hidden.</td></tr>
+    <tr><td>Fit</td><td>R-squared 0.79</td><td>Quoted on the page; the residual fifth of variation is what the terms cannot see.</td></tr>
+    <tr><td>BMI span of the sample</td><td>13.9 to 40.9 kg/m2</td><td>Outside it, the page flags the result as an extrapolation.</td></tr>
+    <tr><td>Age span of the sample</td><td>7 to 83 years</td><td>The input floor is 16, because the paediatric equation is separate.</td></tr>
+  </tbody>
+</table>
+<p>The same paper gives a second equation for those aged 15 and under,
+<code>BF% = 1.51 x BMI - 0.70 x age - 3.6 x sex + 1.4 (aged 15 and under, R-squared 0.38, SEE 4.4% body fat)</code>. It is a weaker model, and
+this module refuses to apply it: a formula fitted on growing bodies is a different
+measurement problem. The authors also report that in obese subjects the
+prediction formulas slightly overestimate body fat, so the error is likelier to grow towards
+the bottom of the grid than to sit evenly across it.</p>
+<h2>Why this page does not rank you against anyone</h2>
+<p>A body-fat percentage from BMI is one of several estimates of the same quantity
+that disagree by points, and a difference smaller than the standard error is not a
+finding. The sibling calculator on this site,
+<a href="https://healthtools.icu/us-navy-body-fat-calculator/">the US Navy circumference method</a>,
+uses a tape measure instead of age and sex, so the two can be read against each
+other as two different questions. Selection rules for which figure gets published at
+all are on the site's <a href="https://healthtools.icu/methodology/">methodology page</a>.</p>
+<p class="note">Reused under MIT: the module is
+<a href="https://github.com/zfy989898/healthtools/blob/main/src/tools/body-fat-from-bmi-calculator.mjs">src/tools/body-fat-from-bmi-calculator.mjs</a> and the grid
+above regenerates from it on export. This is arithmetic over numbers you type in, not
+medical advice. Repo: <a href="https://github.com/zfy989898/healthtools">github.com/zfy989898/healthtools</a>.</p>
+</body></html>
