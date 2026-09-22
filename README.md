@@ -27,6 +27,15 @@ The same table, as a browsable page: <https://zfy989898.github.io/healthtools/>.
 - `lib/gates.mjs` - the build fails unless every page passes it: English only, complete metadata, a traceable citation, a word floor, no near-duplicate of another page, reachable from the homepage in three links.
 - `citations.lock.json` - what the citation check last saw at PubMed, for each PMID used.
 
+## How a number gets onto a page
+
+Each constant is transcribed from a named paper, and the check re-resolves every PMID
+against PubMed before a build is allowed to ship. Written out on the site:
+[how the sources are chosen and checked](https://healthtools.icu/methodology/),
+[who runs this](https://healthtools.icu/about/). The browsable version of the table
+above, with the formula each module implements, is on the
+[documentation page](https://zfy989898.github.io/healthtools/).
+
 ## Run
 
 ```sh
