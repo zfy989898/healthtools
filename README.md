@@ -19,6 +19,7 @@ The same table, as a browsable page: <https://zfy989898.github.io/healthtools/>.
 | [Heart Rate Zone Calculator](https://healthtools.icu/heart-rate-zone-calculator/) | [`src/tools/heart-rate-zone-calculator.mjs`](src/tools/heart-rate-zone-calculator.mjs) |
 | [Us Navy Body Fat Calculator](https://healthtools.icu/us-navy-body-fat-calculator/) | [`src/tools/us-navy-body-fat-calculator.mjs`](src/tools/us-navy-body-fat-calculator.mjs) |
 | [Vo2 Max Heart Rate Ratio Calculator](https://healthtools.icu/vo2-max-heart-rate-ratio-calculator/) | [`src/tools/vo2-max-heart-rate-ratio-calculator.mjs`](src/tools/vo2-max-heart-rate-ratio-calculator.mjs) |
+| [Waist To Height Ratio Calculator](https://healthtools.icu/waist-to-height-ratio-calculator/) | [`src/tools/waist-to-height-ratio-calculator.mjs`](src/tools/waist-to-height-ratio-calculator.mjs) |
 
 ## Layout
 
