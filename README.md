@@ -17,6 +17,7 @@ The same table, as a browsable page: <https://zfy989898.github.io/healthtools/>.
 | [Body Fat From Bmi Calculator](https://healthtools.icu/body-fat-from-bmi-calculator/) | [`src/tools/body-fat-from-bmi-calculator.mjs`](src/tools/body-fat-from-bmi-calculator.mjs) |
 | [Caffeine Half Life Calculator](https://healthtools.icu/caffeine-half-life-calculator/) | [`src/tools/caffeine-half-life-calculator.mjs`](src/tools/caffeine-half-life-calculator.mjs) |
 | [Heart Rate Zone Calculator](https://healthtools.icu/heart-rate-zone-calculator/) | [`src/tools/heart-rate-zone-calculator.mjs`](src/tools/heart-rate-zone-calculator.mjs) |
+| [Resting Energy Expenditure Calculator](https://healthtools.icu/resting-energy-expenditure-calculator/) | [`src/tools/resting-energy-expenditure-calculator.mjs`](src/tools/resting-energy-expenditure-calculator.mjs) |
 | [Us Navy Body Fat Calculator](https://healthtools.icu/us-navy-body-fat-calculator/) | [`src/tools/us-navy-body-fat-calculator.mjs`](src/tools/us-navy-body-fat-calculator.mjs) |
 | [Vo2 Max Heart Rate Ratio Calculator](https://healthtools.icu/vo2-max-heart-rate-ratio-calculator/) | [`src/tools/vo2-max-heart-rate-ratio-calculator.mjs`](src/tools/vo2-max-heart-rate-ratio-calculator.mjs) |
 | [Waist To Height Ratio Calculator](https://healthtools.icu/waist-to-height-ratio-calculator/) | [`src/tools/waist-to-height-ratio-calculator.mjs`](src/tools/waist-to-height-ratio-calculator.mjs) |

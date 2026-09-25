@@ -31,6 +31,13 @@
    "33042384"
   ]
  },
+ "src/tools/resting-energy-expenditure-calculator.mjs": {
+  "sha256": "373d35c155d25b962ece385741868dbe39e77a04284eacba868ce56c79d24570",
+  "pmids": [
+   "2305711",
+   "9550168"
+  ]
+ },
  "src/tools/us-navy-body-fat-calculator.mjs": {
   "sha256": "dc16b7951fce785d2f0b476b37cf04b4604a7b41086fa8f3dabc8430a223f2eb",
   "pmids": [
