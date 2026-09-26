@@ -21,6 +21,14 @@
    "28603504"
   ]
  },
+ "src/tools/heart-rate-recovery-calculator.mjs": {
+  "sha256": "caeeb7104d8683afb03c07824c600e84ad29457f6b8f2caf67d1da24fd0ced9d",
+  "pmids": [
+   "10536127",
+   "14969619",
+   "29754656"
+  ]
+ },
  "src/tools/heart-rate-zone-calculator.mjs": {
   "sha256": "fb7daf35a5fd0a1e67f93ec829960534b5aca4173bddb7f48f68ef73a3a32fe2",
   "pmids": [

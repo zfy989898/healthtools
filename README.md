@@ -16,6 +16,7 @@ The same table, as a browsable page: <https://zfy989898.github.io/healthtools/>.
 | [Acute Chronic Workload Ratio Calculator](https://healthtools.icu/acute-chronic-workload-ratio-calculator/) | [`src/tools/acute-chronic-workload-ratio-calculator.mjs`](src/tools/acute-chronic-workload-ratio-calculator.mjs) |
 | [Body Fat From Bmi Calculator](https://healthtools.icu/body-fat-from-bmi-calculator/) | [`src/tools/body-fat-from-bmi-calculator.mjs`](src/tools/body-fat-from-bmi-calculator.mjs) |
 | [Caffeine Half Life Calculator](https://healthtools.icu/caffeine-half-life-calculator/) | [`src/tools/caffeine-half-life-calculator.mjs`](src/tools/caffeine-half-life-calculator.mjs) |
+| [Heart Rate Recovery Calculator](https://healthtools.icu/heart-rate-recovery-calculator/) | [`src/tools/heart-rate-recovery-calculator.mjs`](src/tools/heart-rate-recovery-calculator.mjs) |
 | [Heart Rate Zone Calculator](https://healthtools.icu/heart-rate-zone-calculator/) | [`src/tools/heart-rate-zone-calculator.mjs`](src/tools/heart-rate-zone-calculator.mjs) |
 | [Resting Energy Expenditure Calculator](https://healthtools.icu/resting-energy-expenditure-calculator/) | [`src/tools/resting-energy-expenditure-calculator.mjs`](src/tools/resting-energy-expenditure-calculator.mjs) |
 | [Us Navy Body Fat Calculator](https://healthtools.icu/us-navy-body-fat-calculator/) | [`src/tools/us-navy-body-fat-calculator.mjs`](src/tools/us-navy-body-fat-calculator.mjs) |
